@@ -27,9 +27,11 @@
   </div>
 
   <div>
-  <%= form.label :published, style: "display: block" %>
-  <%= form.text_field :published %>
-</div>
+    <%= form.label :published, style: "display: block" %>
+    <%= form.select :book_published_at_1i, options_for_select((Date.today.year - 100)..Date.today.year), { include_blank: "Select Year" } %>
+    <%= form.select :book_published_at_2i, options_for_select(1..12), { include_blank: "Select Month" } %>
+    <%= form.select :book_published_at_3i, options_for_select(1..31), { include_blank: "Select Day" } %>
+  </div>
 
   <div>
     <%= form.submit %>

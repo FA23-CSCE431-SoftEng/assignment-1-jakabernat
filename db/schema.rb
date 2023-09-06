@@ -20,7 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_05_163010) do
     t.datetime "updated_at", null: false
     t.string "author"
     t.string "price"
-    t.string "published"
+    t.datetime "published"
   end
 
 end
